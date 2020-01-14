@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => this.currencies = data.rates)
         this.currencies = null;
+      },
+      calculatedCurrency: function (input, currency) {
+        return this.input * this.selectedCurrency
       }
     }
   });
