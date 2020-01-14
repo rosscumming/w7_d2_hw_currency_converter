@@ -11,7 +11,14 @@
 </head>
 <body>
   <div id="app">
-
+    <h1>Currency converter</h1>
+    <form>
+      <input type="number" name="" value="">
+      <select id="select" v-model="selectedCurrency">
+        <option disabled selected :value="null">Please choose a currency</option>
+        <option v-for="(currency, key)  in currencies" v-bind:value="currency"> {{ key }} </option>
+      </select>
+    </form>
   </div>
 </body>
 </html>
